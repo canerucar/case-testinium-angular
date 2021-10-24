@@ -1,0 +1,58 @@
+@import "../../app.component.scss";
+
+.about-wrapper {
+  &__title {
+    color: $blue;
+    font-weight: 700;
+    font-size: 30px;
+    text-align: center;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 20px;
+
+    li {
+      padding: 20px;
+
+      &:hover {
+        background-color: $blue100;
+        cursor: pointer;
+      }
+
+      img {
+        width: 100px;
+      }
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: center;
+
+    .button {
+      height: 58px;
+      width: 145px;
+      border-radius: 5px;
+      border: none;
+      font-size: 18px;
+      color: $white;
+      background: $green;
+      cursor: pointer;
+      transition: 300ms all;
+
+      &:hover {
+        background-color: $green100;
+      }
+
+      a {
+        text-decoration: none;
+        color: $white;
+      }
+    }
+  }
+}

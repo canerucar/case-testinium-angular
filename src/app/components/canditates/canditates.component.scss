@@ -1,0 +1,82 @@
+@import "../../app.component.scss";
+
+.canditates{
+  max-width: 1170px;
+  margin: 0 auto;
+
+  .search {
+    input {
+      height: 45px;
+      padding-left: 15px;
+      border-radius: 25px;
+      border: none;
+      background-color: $aliceblue;
+      border: 1px solid $bisque;
+      font-size: 16px;
+    }
+  }
+
+  &-wrapper {
+    list-style: none;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: $aliceblue;
+    border-radius: 15px;
+    padding: 20px;
+
+    li {
+      padding: 20px 15px;
+      background-color: $bisque;
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 10px;
+      transition: 300ms all;
+      display: flex;
+      align-items: center;
+
+      &:hover{
+        background-color: $bisque100;
+        cursor: pointer;
+      }
+
+      .phone {
+        padding: 10px;
+        background-color: $honeydew;
+        border-radius: 30px;
+        font-size: 12px;
+        margin-left: 20px;
+      }
+
+      a {
+        padding: 10px 20px;
+        background-color: $tomato;
+        color: $white;
+        text-decoration: none;
+        border-radius: 10px;
+        right: 20px;
+        top: 20%;
+        margin-left: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .canditates{
+    &-wrapper {
+      li {
+        flex-direction: column;
+        gap: 15px;
+
+        .phone {
+          margin-left: 0;
+        }
+
+        a {
+          margin-left: 0;
+        }
+      }
+    }
+  }
+}

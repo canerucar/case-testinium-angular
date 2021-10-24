@@ -1,0 +1,16 @@
+
+<div class="canditates">
+  <h1>Canditates Content</h1>
+  
+  <div class="search">
+    <input type="text" [(ngModel)]="filterBy" placeholder="Search..." (keyup)="filter()">
+  </div>
+  
+  <ul class="canditates-wrapper">
+    <li *ngFor="let user of filteredUsers">
+      <span>{{user.name}}</span>
+      <span class="phone">{{user.phone}}</span>
+      <a routerLink="/detail/{{user.id}}">click for details</a>
+    </li>
+  </ul>
+</div>
