@@ -24,7 +24,5 @@ export class DetailComponent implements OnInit {
     this.userService
       .getById(userId)
       .subscribe((data) => (this.userData = data));
-    console.log(userId);
-    console.log(typeof userId);
   }
 }

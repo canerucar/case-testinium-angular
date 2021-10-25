@@ -11,12 +11,6 @@ export class UserService {
 
   constructor(private http: HttpClient) {}
 
-  getUser(userId) {
-    return this.http.get(
-      'https://jsonplaceholder.typicode.com/users/' + userId
-    );
-  }
-
   getById(id):Observable<any>{
     const url = `${this.apiUrl}/users/${id}`;
     return this.http.get(url);
